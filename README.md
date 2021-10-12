@@ -1,2 +1,2 @@
 # spookynfts
-Generate a random spooky NFT. Uses Rinkeby Testnet.
+Generate an NFT rnadomly combining three Halloween-y words. Uses Rinkeby Testnet (no ETH gas fees required).
