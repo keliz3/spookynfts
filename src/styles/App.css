@@ -1,0 +1,156 @@
+.App {
+  height: 100vh;
+  background: linear-gradient(to bottom, #222b35, #0d1116);
+  overflow: hidden;
+  text-align: center;
+  font-family: 'Syne Mono', monospace;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bg {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  width: 200%;
+  height: 200vh;
+  height: 200vh;
+  background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+  background-repeat: repeat;
+  animation: bg-animation .2s infinite;
+  opacity: .9;
+  visibility: visible;
+  z-index: 1;
+}
+
+.header-container {
+  padding-top: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  z-index: 2;
+}
+
+.header {
+  margin: 0 auto;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.sub-text {
+  font-size: 25px;
+  color: rgba(128, 128, 128, 0.466);
+}
+
+.gradient-text {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Pirata One', cursive;
+  font-size: 6rem;
+  animation:flash 5s linear infinite;
+}
+
+@media (max-width: 480px) {
+  .gradient-text {
+    font-size: 4rem;
+  }
+  .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .header-container {
+    padding-top: 50px;
+    padding-bottom: 10px;
+  }
+}
+
+.cta-button {
+  height: 45px;
+  border: 0;
+  width: 80%;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin: 8px auto;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(167, 167, 167);
+  font-family: 'Syne Mono', monospace;
+}
+
+.connect-wallet-button {
+  background-color: rgb(85, 22, 22);
+  background-size: 200% 200%;
+  animation: gradient-animation 4s ease infinite;
+  font-family: 'Syne Mono', monospace;
+  margin: 8px auto;
+  width: 20rem;
+}
+
+.mint-button {
+  background-color: rgb(85, 22, 22);
+  background-size: 200% 200%;
+  margin-right: 15px;
+  font-family: 'Syne Mono', monospace;
+  margin: 8px auto;
+  width: 20rem;
+}
+
+.opensea-button {
+  background-color: rgb(85, 22, 22);
+  margin: 8px auto;
+  width: 20rem;
+}
+
+.mint-count {
+  color: rgb(167, 167, 167);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 30px;
+  margin: 8px auto;
+  z-index: 2;
+}
+
+.footer-text {
+  color: rgba(128, 128, 128, 0.466);
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Syne Mono', monospace;
+}
+
+@keyframes flash{ 
+  0%,  95%,  98% {background-color:rgba(128, 128, 128, 0.185)}
+  96%, 99%, 100% {background-color:rgba(255, 255, 255, 0.425)} 
+}
+
+@keyframes bg-animation {
+  0% {transform: translate(0,0) }
+  10% {transform: translate(-5%,-5%) }
+  20% {transform: translate(-10%,5%) }
+  30% {transform: translate(5%,-10%) }
+  40% {transform: translate(-5%,15%) }
+  50% {transform: translate(-10%,5%) }
+  60% {transform: translate(15%,0) }
+  70% {transform: translate(0,10%) }
+  80% {transform: translate(-15%,0) }
+  90% {transform: translate(10%,5%) }
+  100% {transform: translate(5%,0) }
+}
